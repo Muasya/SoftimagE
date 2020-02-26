@@ -1,0 +1,53 @@
+
+
+
+
+<div class="all_welcome">
+
+</div>
+<div class="hello_butt" (click)="hello();">
+
+  HELLO
+
+</div>
+
+
+<div [class.scanneroof]="!scanning" [class.scanner]="scanning">
+
+<div class="scanning_box" [hidden]="scanner_done">
+  <webcam [trigger]="triggerObservable" (imageCapture)="handleImage($event)"></webcam>
+  <div [class.scanactiveoof]="!activeScan" [class.scanactive]="activeScan">
+
+<div class="top_scan">
+<div class="moving_bar"></div>
+</div>
+<div class="bottom_scan">
+Just A Moment ...
+</div>
+
+
+
+  </div>
+</div>
+
+<div [class.useroof]="!inuser" [class.scanactive]="inuser">
+
+
+  <div class="profile_me">
+<div>
+{{massage}}<br/>
+</div>
+<div>
+<img [src]="user_image"  height="200px" width="200px" />
+{{user}}
+</div>
+  </div>
+
+
+  </div>
+<!-- <button class="actionBtn" (click)="triggerSnapshot();">Take A Snapshot</button> -->
+
+</div>
+
+
+
